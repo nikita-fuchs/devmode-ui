@@ -1,7 +1,505 @@
-<div class="container">
+<!-- <div class="container">
   <h1 class="title">
     {{ 'PAGES.DETAIL.TITLE' | translate }}
   </h1>
 
   <a routerLink="/">{{ 'PAGES.DETAIL.BACK_TO_HOME' | translate }}</a>
+</div>
+ -->
+ <div id="app">
+  <div class="AppShell">
+     <nav class="TopNavBar">
+
+       <!-- Top menu start  -->
+        <main class="Main">
+           <div class="Menu">
+              <a href="#/accounts" aria-current="page" class="Active">
+                 <svg width="46" height="46" viewBox="0 0 46 46" xmlns="http://www.w3.org/2000/svg">
+                    <g transform="translate(1 1)" stroke-width="2" fill="none" fill-rule="evenodd">
+                       <path d="M30.182 26.545c-1.722-.192-4.463-.91-8.182-.91-3.72 0-6.46.718-8.182.91-1.072.836-1.818 1.93-1.818 2.728v3.636h20v-3.637c0-.798-.746-1.892-1.818-2.728zm-12.727-8.181v-1.82c0-2.407 2.238-4.544 5.454-4.544 2.306 0 4.545 2.137 4.545 4.545v1.82c0 2.407-2.24 4.544-4.546 4.544-3.217 0-5.455-2.138-5.455-4.546z" stroke="gray" stroke-linecap="round" stroke-linejoin="round"></path>
+                       <circle stroke="#979797" cx="22" cy="22" r="22"></circle>
+                    </g>
+                 </svg>
+                 Accounts
+              </a>
+              <a href="#/blocks">
+                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 46 46">
+                    <g transform="translate(1 1)" fill="none" stroke="gray" stroke-width="2">
+                       <path d="M13 13h7.1v7.1H13zM24.9 13H32v7.1h-7.1zM24.9 24.9V32H32v-7.1h-7.1zm-11.9 0V32h7.1v-7.1H13z"></path>
+                       <circle cx="22" cy="22" r="22"></circle>
+                    </g>
+                 </svg>
+                 Blocks
+              </a>
+              <a href="#/transactions">
+                 <svg xmlns="http://www.w3.org/2000/svg" width="46" height="46" viewBox="0 0 46 46">
+                    <g fill="none" fill-rule="evenodd" stroke-width="2" transform="translate(1 1)">
+                       <g stroke="gray" stroke-linecap="round" stroke-linejoin="round">
+                          <path d="M20.37 17.667h12.778M27.819 24.969l5.393-7.34-5.393-7.341"></path>
+                          <g>
+                             <path d="M24.63 26.185H11.852M16.728 18.662l-5.393 7.34 5.393 7.341"></path>
+                          </g>
+                       </g>
+                       <circle cx="22" cy="22" r="22" stroke="#979797"></circle>
+                    </g>
+                 </svg>
+                 Transactions
+              </a>
+              <a class="" href="#/contracts">
+                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 46 46">
+                    <circle cx="23" cy="23" r="22" fill="none" stroke="#979797" stroke-width="2"></circle>
+                    <g fill="#979797">
+                       <path d="M18.5 11.6l-4.6 4.6v18.7h18.2V11.6zm-.4 2.2v2.1H16zm12.7 19.8H15.2V17.1h4.2v-4.2h11.5v20.7z"></path>
+                       <path d="M17.1 18.7h11.7v1.2H17.1zM17.1 22.3h11.7v1.2H17.1zM17.1 25.5h11.7v1.2H17.1zM17.1 29h8.5v1.2h-8.5z"></path>
+                    </g>
+                 </svg>
+                 Contracts
+              </a>
+              <a href="#/events">
+                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 46 46">
+                    <circle cx="23" cy="23" r="22" fill="none" stroke="#979797" stroke-width="2"></circle>
+                    <path d="M23 34.57a3.29 3.29 0 01-2.4-1 3.23 3.23 0 01-.92-1.77h-4.24a2.67 2.67 0 01-1.86-4.57 5.06 5.06 0 00.85-1 6.21 6.21 0 00.74-1.9 14.4 14.4 0 00.33-3.46 7.53 7.53 0 01.82-3.42 7.74 7.74 0 012.25-2.64A7.51 7.51 0 0121 13.63v-.31a2 2 0 01.57-1.41 2 2 0 012.82 0 1.91 1.91 0 01.61 1.42 1.61 1.61 0 010 .31 7.32 7.32 0 012.45 1.18 7.56 7.56 0 012.25 2.65 7.28 7.28 0 01.82 3.42 15.85 15.85 0 00.31 3.44 6.74 6.74 0 00.73 1.83 5 5 0 00.89 1 2.68 2.68 0 01.77 1.91 2.62 2.62 0 01-2.58 2.67h-4.32a3.11 3.11 0 01-.92 1.77 3.25 3.25 0 01-2.4 1.06zm0-20l-1 .16a6 6 0 00-2.69 1.09A6.47 6.47 0 0017.43 18a6.26 6.26 0 00-.68 2.85 15.75 15.75 0 01-.36 3.75 7.1 7.1 0 01-.9 2.21 6.08 6.08 0 01-1 1.27 1.46 1.46 0 00-.46 1 1.41 1.41 0 00.41 1 1.35 1.35 0 001 .41h5.44v.62a2.1 2.1 0 00.61 1.52 2 2 0 001.51.61 2 2 0 001.51-.61 2 2 0 00.62-1.52v-.62h5.43a1.32 1.32 0 001-.41 1.34 1.34 0 00.41-1 1.51 1.51 0 00-.42-1 6.06 6.06 0 01-1.08-1.28 7.59 7.59 0 01-.89-2.19 17 17 0 01-.36-3.76 6 6 0 00-.68-2.85 6.26 6.26 0 00-1.88-2.21A6 6 0 0024 14.71zm0-2a.77.77 0 00-.75.76.71.71 0 00.13.4l.62.82.62-.82a.58.58 0 00.13-.4.79.79 0 00-.75-.76z" fill="#979797"></path>
+                 </svg>
+                 Events
+              </a>
+              <a href="#/logs">
+                 <svg xmlns="http://www.w3.org/2000/svg" width="46" height="46" viewBox="0 0 46 46">
+                    <g fill="none" fill-rule="evenodd" stroke-width="2" transform="translate(1 1)">
+                       <g stroke="gray" stroke-linecap="round" stroke-linejoin="round">
+                          <path d="M15.316 22.894l3.079 2.54-3.079 2.541M19.5 27.783h4.105"></path>
+                          <path d="M12.237 31.335h20.526V15.313H12.237zM12.75 19.565h19.712m-15.897-3.822v2.953"></path>
+                       </g>
+                       <circle cx="22" cy="22" r="22" stroke="#979797"></circle>
+                    </g>
+                 </svg>
+                 Logs
+              </a>
+           </div>
+
+           
+           <div class="NotificationAndSearchBar">
+             <input type="text" placeholder="SEARCH FOR BLOCK NUMBERS OR TX HASHES" title="SEARCH FOR BLOCK NUMBERS OR TX HASHES" value="">
+             <svg xmlns="http://www.w3.org/2000/svg" width="18" height="17" viewBox="0 0 18 17">
+               <path d="M17 16l-5-4M7 1a6 6 0 110 12A6 6 0 017 1h0z" fill="none" fill-rule="evenodd" stroke="#848485" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+              </svg>
+            </div>
+          </main>
+
+          <!-- top menu end -->
+
+        <!-- 2nd top nav bar start-->
+        <section class="StatusAndControls">
+           <div class="Status">
+              <div class="StatusIndicator">
+                 <div class="Metric">
+                    <h4>CURRENT BLOCK</h4>
+                    <span>22</span>
+                 </div>
+              </div>
+              <div class="StatusIndicator">
+                 <div class="Metric">
+                    <h4>GAS PRICE</h4>
+                    <span>20000000000</span>
+                 </div>
+              </div>
+              <div class="StatusIndicator">
+                 <div class="Metric">
+                    <h4>GAS LIMIT</h4>
+                    <span>6721975</span>
+                 </div>
+              </div>
+              <div class="StatusIndicator">
+                 <div class="Metric">
+                    <h4>HARDFORK</h4>
+                    <span>petersburg</span>
+                 </div>
+              </div>
+              <div class="StatusIndicator">
+                 <div class="Metric">
+                    <h4>NETWORK ID</h4>
+                    <span>5777</span>
+                 </div>
+              </div>
+              <div class="StatusIndicator">
+                 <div class="Metric">
+                    <h4>RPC SERVER</h4>
+                    <span>http://0.0.0.0:8545</span>
+                 </div>
+              </div>
+              <div class="StatusIndicator">
+                 <div class="Metric">
+                    <h4>MINING STATUS</h4>
+                    <span>Automining</span>
+                 </div>
+              </div>
+           </div>
+           <div class="Actions">
+              <div class="StatusIndicator">
+                 <div class="Metric">
+                    <h4>WORKSPACE</h4>
+                    <span>Metacoin Workshop</span>
+                 </div>
+              </div>
+              <button>Switch</button>
+              <a href="#/config">
+                 <button>
+                    <div class="settingsIconWrapper">
+                       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20.9 21.78">
+                          <path class="cls-1" d="M20.83 13.4a1.06 1.06 0 00-.51-.57L19 12a9.49 9.49 0 000-2.26L20.3 9a1.09 1.09 0 00.53-.59 1.23 1.23 0 000-.74 11 11 0 00-2.43-4.15 1.35 1.35 0 00-.58-.33 1.15 1.15 0 00-.8.11l-1.37.82A8.58 8.58 0 0013.73 3V1.37a1.17 1.17 0 00-.22-.67 1.11 1.11 0 00-.65-.44A11.13 11.13 0 008 .27a1 1 0 00-.6.43 1.1 1.1 0 00-.22.67V3a8.65 8.65 0 00-2 1.12l-1.4-.84a1.13 1.13 0 00-.76-.09 1.32 1.32 0 00-.6.35A10.81 10.81 0 000 7.67a1.15 1.15 0 000 .71 1 1 0 00.49.56L2 9.76A9.49 9.49 0 002 12l-1.34.79a1.06 1.06 0 00-.53.59 1.16 1.16 0 000 .74 10.78 10.78 0 002.43 4.15 1.29 1.29 0 00.58.33 1.16 1.16 0 00.8-.11l1.36-.82a8.65 8.65 0 002 1.12v1.6a1.1 1.1 0 00.22.67 1.09 1.09 0 00.64.44 11.55 11.55 0 002.41.26 11.17 11.17 0 002.43-.27 1.06 1.06 0 00.63-.43 1.17 1.17 0 00.22-.67v-1.6a8.58 8.58 0 001.95-1.12l1.41.84a1.12 1.12 0 00.76.09 1.37 1.37 0 00.6-.35 11.07 11.07 0 002.42-4.16 1.23 1.23 0 00-.16-.69zm-7.6.27a3.91 3.91 0 01-5.56 0 3.79 3.79 0 01-1.15-2.78A3.94 3.94 0 0110.45 7a3.78 3.78 0 012.78 1.16 3.91 3.91 0 010 5.56z"></path>
+                       </svg>
+                    </div>
+                 </button>
+              </a>
+           </div>
+        </section>
+        <!-- 2nd top nav bar end -->
+     </nav>
+
+
+ 
+     <div class="ShellContainer">
+        <div class="scrollBar" style="position: relative; overflow: hidden; width: 100%; height: 100%;">
+           <div style="position: absolute; top: 0px; left: 0px; right: 0px; bottom: 0px; overflow: scroll; margin-right: -15px; margin-bottom: -15px;">
+              <div class="AccountsScreen">
+                 <main>
+                    <div class="Mnemonic">
+                      
+                      <!-- third top menu start  -->
+                       <section class="MnemonicAndHdPath">
+                          <div class="Mnemonic">
+                             <h4>MNEMONIC <span class="WarningIndicator">?</span></h4>
+                             <span class="popover-container">hollow grit sea curious similar shock there leaf chronic sunny resist addict <span class="popover popunder">note: this mnemonic is not secure; don't use it on a public blockchain.</span></span>
+                          </div>
+                          <div class="HDPath">
+                             <h4>HD PATH</h4>
+                             <span>m/44'/60'/0'/0/account_index</span>
+                          </div>
+                       </section>
+                    </div>
+                    <!-- third top menu start  -->
+
+                    <div class="AccountList">
+                       <div class="AccountCard">
+                          <div class="AddressAndBalance">
+                             <div class="AccountAddress">
+                                <div class="Label">ADDRESS</div>
+                                <div class="Value"><span>0x4beD0792c0E397515213b574aacfea051228B8c3</span></div>
+                             </div>
+                             <div class="AccountBalance">
+                                <div class="Label">BALANCE</div>
+                                <div class="Value"><span title="99.93">99.93 ETH</span></div>
+                             </div>
+                          </div>
+                          <div class="SecondaryInfo">
+                             <div class="TransactionCount">
+                                <div class="Label">TX COUNT</div>
+                                <div class="Value">22</div>
+                             </div>
+                             <div class="AccountIndex">
+                                <div class="Label">INDEX</div>
+                                <div class="Value">0</div>
+                             </div>
+                             <span class="ShowKeys popover-container">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 64 64" stroke-width="2">
+                                   <g fill="none" stroke="#444" stroke-width="3" stroke-linecap="square" stroke-miterlimit="10">
+                                      <path d="M50 2L23.8 28.1c-5.7-1.5-12.1-.1-16.5 4.4C.6 39.2.6 50 7.3 56.7s17.5 6.7 24.2 0c4.5-4.5 5.9-10.8 4.4-16.5L42 34v-8h8v-8h8l4-4V2H50z"></path>
+                                      <circle color="color-2" cx="15" cy="46" r="5"></circle>
+                                   </g>
+                                </svg>
+                                <span class="popover">Show Keys</span>
+                             </span>
+                          </div>
+                       </div>
+                       <div class="AccountCard">
+                          <div class="AddressAndBalance">
+                             <div class="AccountAddress">
+                                <div class="Label">ADDRESS</div>
+                                <div class="Value"><span>0x0b4bfb96E96DcF5de6B2932Efb624EAe3d1fd9fb</span></div>
+                             </div>
+                             <div class="AccountBalance">
+                                <div class="Label">BALANCE</div>
+                                <div class="Value"><span title="100.00">100.00 ETH</span></div>
+                             </div>
+                          </div>
+                          <div class="SecondaryInfo">
+                             <div class="TransactionCount">
+                                <div class="Label">TX COUNT</div>
+                                <div class="Value">0</div>
+                             </div>
+                             <div class="AccountIndex">
+                                <div class="Label">INDEX</div>
+                                <div class="Value">1</div>
+                             </div>
+                             <span class="ShowKeys popover-container">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 64 64" stroke-width="2">
+                                   <g fill="none" stroke="#444" stroke-width="3" stroke-linecap="square" stroke-miterlimit="10">
+                                      <path d="M50 2L23.8 28.1c-5.7-1.5-12.1-.1-16.5 4.4C.6 39.2.6 50 7.3 56.7s17.5 6.7 24.2 0c4.5-4.5 5.9-10.8 4.4-16.5L42 34v-8h8v-8h8l4-4V2H50z"></path>
+                                      <circle color="color-2" cx="15" cy="46" r="5"></circle>
+                                   </g>
+                                </svg>
+                                <span class="popover">Show Keys</span>
+                             </span>
+                          </div>
+                       </div>
+                       <div class="AccountCard">
+                          <div class="AddressAndBalance">
+                             <div class="AccountAddress">
+                                <div class="Label">ADDRESS</div>
+                                <div class="Value"><span>0xd9ECFA72Fb72d70A8b3200E7aE78f5FfD4738E39</span></div>
+                             </div>
+                             <div class="AccountBalance">
+                                <div class="Label">BALANCE</div>
+                                <div class="Value"><span title="100.00">100.00 ETH</span></div>
+                             </div>
+                          </div>
+                          <div class="SecondaryInfo">
+                             <div class="TransactionCount">
+                                <div class="Label">TX COUNT</div>
+                                <div class="Value">0</div>
+                             </div>
+                             <div class="AccountIndex">
+                                <div class="Label">INDEX</div>
+                                <div class="Value">2</div>
+                             </div>
+                             <span class="ShowKeys popover-container">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 64 64" stroke-width="2">
+                                   <g fill="none" stroke="#444" stroke-width="3" stroke-linecap="square" stroke-miterlimit="10">
+                                      <path d="M50 2L23.8 28.1c-5.7-1.5-12.1-.1-16.5 4.4C.6 39.2.6 50 7.3 56.7s17.5 6.7 24.2 0c4.5-4.5 5.9-10.8 4.4-16.5L42 34v-8h8v-8h8l4-4V2H50z"></path>
+                                      <circle color="color-2" cx="15" cy="46" r="5"></circle>
+                                   </g>
+                                </svg>
+                                <span class="popover">Show Keys</span>
+                             </span>
+                          </div>
+                       </div>
+                       <div class="AccountCard">
+                          <div class="AddressAndBalance">
+                             <div class="AccountAddress">
+                                <div class="Label">ADDRESS</div>
+                                <div class="Value"><span>0x79304212E79A7FCbdA1D38bf77D1ae57fA597559</span></div>
+                             </div>
+                             <div class="AccountBalance">
+                                <div class="Label">BALANCE</div>
+                                <div class="Value"><span title="100.00">100.00 ETH</span></div>
+                             </div>
+                          </div>
+                          <div class="SecondaryInfo">
+                             <div class="TransactionCount">
+                                <div class="Label">TX COUNT</div>
+                                <div class="Value">0</div>
+                             </div>
+                             <div class="AccountIndex">
+                                <div class="Label">INDEX</div>
+                                <div class="Value">3</div>
+                             </div>
+                             <span class="ShowKeys popover-container">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 64 64" stroke-width="2">
+                                   <g fill="none" stroke="#444" stroke-width="3" stroke-linecap="square" stroke-miterlimit="10">
+                                      <path d="M50 2L23.8 28.1c-5.7-1.5-12.1-.1-16.5 4.4C.6 39.2.6 50 7.3 56.7s17.5 6.7 24.2 0c4.5-4.5 5.9-10.8 4.4-16.5L42 34v-8h8v-8h8l4-4V2H50z"></path>
+                                      <circle color="color-2" cx="15" cy="46" r="5"></circle>
+                                   </g>
+                                </svg>
+                                <span class="popover">Show Keys</span>
+                             </span>
+                          </div>
+                       </div>
+                       <div class="AccountCard">
+                          <div class="AddressAndBalance">
+                             <div class="AccountAddress">
+                                <div class="Label">ADDRESS</div>
+                                <div class="Value"><span>0xd18c0366DC3888C0544931705b23572C32afB273</span></div>
+                             </div>
+                             <div class="AccountBalance">
+                                <div class="Label">BALANCE</div>
+                                <div class="Value"><span title="100.00">100.00 ETH</span></div>
+                             </div>
+                          </div>
+                          <div class="SecondaryInfo">
+                             <div class="TransactionCount">
+                                <div class="Label">TX COUNT</div>
+                                <div class="Value">0</div>
+                             </div>
+                             <div class="AccountIndex">
+                                <div class="Label">INDEX</div>
+                                <div class="Value">4</div>
+                             </div>
+                             <span class="ShowKeys popover-container">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 64 64" stroke-width="2">
+                                   <g fill="none" stroke="#444" stroke-width="3" stroke-linecap="square" stroke-miterlimit="10">
+                                      <path d="M50 2L23.8 28.1c-5.7-1.5-12.1-.1-16.5 4.4C.6 39.2.6 50 7.3 56.7s17.5 6.7 24.2 0c4.5-4.5 5.9-10.8 4.4-16.5L42 34v-8h8v-8h8l4-4V2H50z"></path>
+                                      <circle color="color-2" cx="15" cy="46" r="5"></circle>
+                                   </g>
+                                </svg>
+                                <span class="popover">Show Keys</span>
+                             </span>
+                          </div>
+                       </div>
+                       <div class="AccountCard">
+                          <div class="AddressAndBalance">
+                             <div class="AccountAddress">
+                                <div class="Label">ADDRESS</div>
+                                <div class="Value"><span>0xC23CE2669c20bD406fD683EC73fDF9a591eCdB01</span></div>
+                             </div>
+                             <div class="AccountBalance">
+                                <div class="Label">BALANCE</div>
+                                <div class="Value"><span title="100.00">100.00 ETH</span></div>
+                             </div>
+                          </div>
+                          <div class="SecondaryInfo">
+                             <div class="TransactionCount">
+                                <div class="Label">TX COUNT</div>
+                                <div class="Value">0</div>
+                             </div>
+                             <div class="AccountIndex">
+                                <div class="Label">INDEX</div>
+                                <div class="Value">5</div>
+                             </div>
+                             <span class="ShowKeys popover-container">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 64 64" stroke-width="2">
+                                   <g fill="none" stroke="#444" stroke-width="3" stroke-linecap="square" stroke-miterlimit="10">
+                                      <path d="M50 2L23.8 28.1c-5.7-1.5-12.1-.1-16.5 4.4C.6 39.2.6 50 7.3 56.7s17.5 6.7 24.2 0c4.5-4.5 5.9-10.8 4.4-16.5L42 34v-8h8v-8h8l4-4V2H50z"></path>
+                                      <circle color="color-2" cx="15" cy="46" r="5"></circle>
+                                   </g>
+                                </svg>
+                                <span class="popover">Show Keys</span>
+                             </span>
+                          </div>
+                       </div>
+                       <div class="AccountCard">
+                          <div class="AddressAndBalance">
+                             <div class="AccountAddress">
+                                <div class="Label">ADDRESS</div>
+                                <div class="Value"><span>0x313cdf2e6D4af5B732a559810B14C01566337570</span></div>
+                             </div>
+                             <div class="AccountBalance">
+                                <div class="Label">BALANCE</div>
+                                <div class="Value"><span title="100.00">100.00 ETH</span></div>
+                             </div>
+                          </div>
+                          <div class="SecondaryInfo">
+                             <div class="TransactionCount">
+                                <div class="Label">TX COUNT</div>
+                                <div class="Value">0</div>
+                             </div>
+                             <div class="AccountIndex">
+                                <div class="Label">INDEX</div>
+                                <div class="Value">6</div>
+                             </div>
+                             <span class="ShowKeys popover-container">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 64 64" stroke-width="2">
+                                   <g fill="none" stroke="#444" stroke-width="3" stroke-linecap="square" stroke-miterlimit="10">
+                                      <path d="M50 2L23.8 28.1c-5.7-1.5-12.1-.1-16.5 4.4C.6 39.2.6 50 7.3 56.7s17.5 6.7 24.2 0c4.5-4.5 5.9-10.8 4.4-16.5L42 34v-8h8v-8h8l4-4V2H50z"></path>
+                                      <circle color="color-2" cx="15" cy="46" r="5"></circle>
+                                   </g>
+                                </svg>
+                                <span class="popover">Show Keys</span>
+                             </span>
+                          </div>
+                       </div>
+                       <div class="AccountCard">
+                          <div class="AddressAndBalance">
+                             <div class="AccountAddress">
+                                <div class="Label">ADDRESS</div>
+                                <div class="Value"><span>0xe50E50C64aecF0B77841B8cE61E871794535CB34</span></div>
+                             </div>
+                             <div class="AccountBalance">
+                                <div class="Label">BALANCE</div>
+                                <div class="Value"><span title="100.00">100.00 ETH</span></div>
+                             </div>
+                          </div>
+                          <div class="SecondaryInfo">
+                             <div class="TransactionCount">
+                                <div class="Label">TX COUNT</div>
+                                <div class="Value">0</div>
+                             </div>
+                             <div class="AccountIndex">
+                                <div class="Label">INDEX</div>
+                                <div class="Value">7</div>
+                             </div>
+                             <span class="ShowKeys popover-container">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 64 64" stroke-width="2">
+                                   <g fill="none" stroke="#444" stroke-width="3" stroke-linecap="square" stroke-miterlimit="10">
+                                      <path d="M50 2L23.8 28.1c-5.7-1.5-12.1-.1-16.5 4.4C.6 39.2.6 50 7.3 56.7s17.5 6.7 24.2 0c4.5-4.5 5.9-10.8 4.4-16.5L42 34v-8h8v-8h8l4-4V2H50z"></path>
+                                      <circle color="color-2" cx="15" cy="46" r="5"></circle>
+                                   </g>
+                                </svg>
+                                <span class="popover">Show Keys</span>
+                             </span>
+                          </div>
+                       </div>
+                       <div class="AccountCard">
+                          <div class="AddressAndBalance">
+                             <div class="AccountAddress">
+                                <div class="Label">ADDRESS</div>
+                                <div class="Value"><span>0x3bE5EF2588bf34481BD7A100fceec9e09def12C4</span></div>
+                             </div>
+                             <div class="AccountBalance">
+                                <div class="Label">BALANCE</div>
+                                <div class="Value"><span title="100.00">100.00 ETH</span></div>
+                             </div>
+                          </div>
+                          <div class="SecondaryInfo">
+                             <div class="TransactionCount">
+                                <div class="Label">TX COUNT</div>
+                                <div class="Value">0</div>
+                             </div>
+                             <div class="AccountIndex">
+                                <div class="Label">INDEX</div>
+                                <div class="Value">8</div>
+                             </div>
+                             <span class="ShowKeys popover-container">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 64 64" stroke-width="2">
+                                   <g fill="none" stroke="#444" stroke-width="3" stroke-linecap="square" stroke-miterlimit="10">
+                                      <path d="M50 2L23.8 28.1c-5.7-1.5-12.1-.1-16.5 4.4C.6 39.2.6 50 7.3 56.7s17.5 6.7 24.2 0c4.5-4.5 5.9-10.8 4.4-16.5L42 34v-8h8v-8h8l4-4V2H50z"></path>
+                                      <circle color="color-2" cx="15" cy="46" r="5"></circle>
+                                   </g>
+                                </svg>
+                                <span class="popover">Show Keys</span>
+                             </span>
+                          </div>
+                       </div>
+                       <div class="AccountCard">
+                          <div class="AddressAndBalance">
+                             <div class="AccountAddress">
+                                <div class="Label">ADDRESS</div>
+                                <div class="Value"><span>0xe657Fac3721304E61343F4f884e389B0089734fc</span></div>
+                             </div>
+                             <div class="AccountBalance">
+                                <div class="Label">BALANCE</div>
+                                <div class="Value"><span title="100.00">100.00 ETH</span></div>
+                             </div>
+                          </div>
+                          <div class="SecondaryInfo">
+                             <div class="TransactionCount">
+                                <div class="Label">TX COUNT</div>
+                                <div class="Value">0</div>
+                             </div>
+                             <div class="AccountIndex">
+                                <div class="Label">INDEX</div>
+                                <div class="Value">9</div>
+                             </div>
+                             <span class="ShowKeys popover-container">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 64 64" stroke-width="2">
+                                   <g fill="none" stroke="#444" stroke-width="3" stroke-linecap="square" stroke-miterlimit="10">
+                                      <path d="M50 2L23.8 28.1c-5.7-1.5-12.1-.1-16.5 4.4C.6 39.2.6 50 7.3 56.7s17.5 6.7 24.2 0c4.5-4.5 5.9-10.8 4.4-16.5L42 34v-8h8v-8h8l4-4V2H50z"></path>
+                                      <circle color="color-2" cx="15" cy="46" r="5"></circle>
+                                   </g>
+                                </svg>
+                                <span class="popover">Show Keys</span>
+                             </span>
+                          </div>
+                       </div>
+                    </div>
+                 </main>
+              </div>
+           </div>
+           <div style="position: absolute; height: 6px; right: 2px; bottom: 2px; left: 2px; border-radius: 3px;">
+              <div style="position: relative; display: block; height: 100%; cursor: pointer; border-radius: inherit; background-color: rgba(0, 0, 0, 0.2); width: 0px;"></div>
+           </div>
+           <div style="position: absolute; width: 6px; right: 2px; bottom: 2px; top: 2px; border-radius: 3px;">
+              <div style="position: relative; display: block; width: 100%; cursor: pointer; border-radius: inherit; background-color: rgba(0, 0, 0, 0.2); height: 383px; transform: translateY(0px);"></div>
+           </div>
+        </div>
+     </div>
+  </div>
 </div>
