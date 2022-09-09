@@ -27,7 +27,12 @@ module.exports = (config, options) => {
 			  excludeAliases: ["console"]
 		})
     ];
-
+    config.resolve = {
+        fallback: {
+            "fs": false,
+            "child_process": false,
+        }
+    }
 
     return config;
 }

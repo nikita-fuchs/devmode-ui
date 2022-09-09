@@ -1,4 +1,22 @@
+//non-working theme bs:
+
+// this is our just created themes.scss file, make sure the path to the file is correct
+/* @use 'themes' as *; */
+
+// framework component styles
+/* @use '@nebular/theme/styles/globals' as *;
+
+// install the framework styles
+@include nb-install() {
+  @include nb-theme-global();
+}
+ */
+// workaround for agnular sometimes not applying styles
+ @use '../src/app/components/account-balance-list/account-balance-list.component.style.scss';
+
 /* You can add global styles to this file, and also import other style files */
+
+
 html, body {
   margin: 0;
   padding: 0;
