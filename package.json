@@ -45,6 +45,8 @@
     "lint": "ng lint"
   },
   "dependencies": {
+    "@angular/animations": "14.0.6",
+    "@angular/cdk": "^13.0.0",
     "@angular/common": "14.0.6",
     "@angular/compiler": "14.0.6",
     "@angular/core": "14.0.6",
@@ -53,6 +55,10 @@
     "@angular/platform-browser": "14.0.6",
     "@angular/platform-browser-dynamic": "14.0.6",
     "@angular/router": "14.0.6",
+    "@electron/remote": "2.0.8",
+    "@nebular/eva-icons": "9.1.0-rc.2",
+    "@nebular/theme": "9.1.0-rc.2",
+    "ng2-smart-table": "1.7.2",
     "rxjs": "7.5.6",
     "tslib": "^2.4.0",
     "zone.js": "~0.11.6"
@@ -70,6 +76,7 @@
     "@ngx-translate/core": "14.0.0",
     "@ngx-translate/http-loader": "7.0.0",
     "@playwright/test": "1.23.4",
+    "@schematics/angular": "14.0.6",
     "@types/jasmine": "4.0.3",
     "@types/jasminewd2": "2.0.10",
     "@types/node": "18.0.6",

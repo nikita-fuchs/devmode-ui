@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { ElectronService } from '../core/services';
-
+import { ExistingProjectsListComponent } from '../components/existing-projects-list/existing-projects-list.component';
 @Component({
   selector: 'app-home',
   templateUrl: './home.component.html',
@@ -16,6 +16,6 @@ export class HomeComponent implements OnInit {
   }
 
   openDir(){
-    this.electronService.openDir();
+    this.electronService.launchDevmode('data_devmode');
   }
 }
