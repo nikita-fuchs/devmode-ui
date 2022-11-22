@@ -21,11 +21,11 @@ export class PrivateKeyComponent implements ViewCell, OnInit {
     // this.renderValue = this.value.toString().toUpperCase();
     // this.renderValue = this.apiState.state.prefundedAccountsMap[]
     if (this.apiState.state.prefundedAccountsMap.get(this.rowData.pub_key)) {
-      console.log("Found private key", this.apiState.state.prefundedAccountsMap.get(this.rowData.pub_key)[0]);
+      console.log('Found private key', this.apiState.state.prefundedAccountsMap.get(this.rowData.pub_key)[0]);
       this.privateKey = this.apiState.state.prefundedAccountsMap.get(this.rowData.pub_key)[0];
 
     }
-    console.log("Rowdata: ", this.rowData);
+    console.log('Rowdata: ', this.rowData);
   }
 
 }

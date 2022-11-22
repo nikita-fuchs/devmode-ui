@@ -78,7 +78,7 @@
 
            
            <div class="NotificationAndSearchBar">
-             <input type="text" placeholder="SEARCH FOR BLOCK NUMBERS OR TX HASHES" title="SEARCH FOR BLOCK NUMBERS OR TX HASHES" value="">
+             <input #search type="text" placeholder="SEARCH FOR BLOCK NUMBERS OR TX HASHES" title="SEARCH FOR BLOCK NUMBERS OR TX HASHES" value="" placeholder="SEARCH FOR ADDRESSES, BALANCES, ETC..." (keyup)="onSearch(search.value)">
              <svg xmlns="http://www.w3.org/2000/svg" width="18" height="17" viewBox="0 0 18 17">
                <path d="M17 16l-5-4M7 1a6 6 0 110 12A6 6 0 017 1h0z" fill="none" fill-rule="evenodd" stroke="#848485" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
               </svg>
@@ -93,37 +93,37 @@
               <div class="StatusIndicator">
                  <div class="Metric">
                     <h4>CURRENT BLOCK</h4>
-                    <span>22</span>
+                    <span>1</span>
                  </div>
               </div>
               <div class="StatusIndicator">
                  <div class="Metric">
                     <h4>GAS PRICE</h4>
-                    <span>20000000000</span>
+                    <span>13370000000000</span>
                  </div>
               </div>
               <div class="StatusIndicator">
                  <div class="Metric">
                     <h4>GAS LIMIT</h4>
-                    <span>6721975</span>
+                    <span>30000000000</span>
                  </div>
               </div>
               <div class="StatusIndicator">
                  <div class="Metric">
-                    <h4>HARDFORK</h4>
-                    <span>petersburg</span>
+                    <h4>PROTOCOL VERSION</h4>
+                    <span>Iris</span>
                  </div>
               </div>
               <div class="StatusIndicator">
                  <div class="Metric">
                     <h4>NETWORK ID</h4>
-                    <span>5777</span>
+                    <span>ae_devmode</span>
                  </div>
               </div>
               <div class="StatusIndicator">
                  <div class="Metric">
                     <h4>RPC SERVER</h4>
-                    <span>http://0.0.0.0:8545</span>
+                    <span>http://0.0.0.0:3013</span>
                  </div>
               </div>
               <div class="StatusIndicator">
@@ -137,7 +137,7 @@
               <div class="StatusIndicator">
                  <div class="Metric">
                     <h4>WORKSPACE</h4>
-                    <span>Metacoin Workshop</span>
+                    <span>ProjectName</span>
                  </div>
               </div>
               <button>Switch</button>
@@ -168,11 +168,11 @@
                        <section class="MnemonicAndHdPath">
                           <div class="Mnemonic">
                              <h4>MNEMONIC <span class="WarningIndicator">?</span></h4>
-                             <span class="popover-container">hollow grit sea curious similar shock there leaf chronic sunny resist addict <span class="popover popunder">note: this mnemonic is not secure; don't use it on a public blockchain.</span></span>
+                             <span class="popover-container">hand cancel fox above correct physical void hungry height unknown vital rice<span class="popover popunder">note: this mnemonic is not secure; don't use it on a public blockchain.</span></span>
                           </div>
                           <div class="HDPath">
                              <h4>HD PATH</h4>
-                             <span>m/44'/60'/0'/0/account_index</span>
+                             <span>m/44H/457H/(account index)H/(change)H/(address index)H </span>
                           </div>
                        </section>
                     </div>
@@ -182,7 +182,7 @@
                     <div class="AccountList">
                       <app-account-balance-list></app-account-balance-list>
 
-                       <div class="AccountCard">
+               <!--         <div class="AccountCard">
                           <div class="AddressAndBalance">
                              <div class="AccountAddress">
                               
@@ -215,6 +215,7 @@
                              </span>
                           </div>
                        </div>
+
                        <div class="AccountCard">
                           <div class="AddressAndBalance">
                              <div class="AccountAddress">
@@ -460,9 +461,10 @@
                                    </g>
                                 </svg>
                                 <span class="popover">Show Keys</span>
+                                
                              </span>
                           </div>
-                       </div>
+                       </div> -->
                     </div>
                  </main>
               </div>

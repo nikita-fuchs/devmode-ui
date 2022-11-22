@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ApiStateService } from '../../services/api-state.service';
+import { AddressComponent } from '../AccountBalanceList/address/address.component';
 import { BalanceComponent } from '../AccountBalanceList/balance/balance.component';
 import { PrivateKeyComponent } from '../AccountBalanceList/private-key/private-key.component';
 
@@ -28,6 +29,8 @@ export class AccountBalanceListComponent implements OnInit {
           title: 'Address',
           class: 'address-column',
           filter: false,
+          type: 'custom',
+          renderComponent: AddressComponent
 
         },
         balance: {

@@ -1,3 +1,51 @@
 :host {
   
 }
+
+.disabled {
+    pointer-events: none;
+    cursor: default;
+    opacity: 0.6;
+  }
+
+  .nb-theme-default a{
+    text-decoration: none !important;
+  }
+
+  .divider{
+    position:absolute;
+    left:50%;
+    top:10%;
+    bottom:10%;
+    border-left:1px solid black;
+}
+
+.centerIcon{
+    transform: translateX(-0.3rem);
+    margin: auto !important;
+    margin-right: 84px !important;
+  }
+  
+  .leaveSpaceForHelp {
+    max-width: 65%;
+    margin-right: 20px;
+    display: inline-block;
+  }
+
+  .floatLeft {
+    float: left
+  }
+
+  .adjustLabelPosition{
+    margin: 0px 20px 20px 0px
+  }
+
+  .or{
+    margin: 0px 20px 0px 20px;
+    color: #ff3d71 !important;
+    background: white !important;
+    cursor: unset;
+  }
+  .outerCardBody {
+    padding: 27px;
+  }

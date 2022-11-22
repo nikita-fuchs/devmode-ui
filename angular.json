@@ -35,7 +35,9 @@
             ],
             "styles": [
               "src/styles.scss",
-              "node_modules/@nebular/theme/styles/prebuilt/default.css"
+              "node_modules/@nebular/theme/styles/prebuilt/default.css",
+
+
             ],
             "scripts": [],
             "customWebpackConfig": {
@@ -147,7 +149,7 @@
             "scripts": [],
             "styles": [
               "src/styles.scss",
-              "node_modules/@nebular/theme/styles/prebuilt/default.css"
+              "node_modules/@nebular/theme/styles/prebuilt/default.css",
             ],
             "assets": [
               "src/favicon.ico",

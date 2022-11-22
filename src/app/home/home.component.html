@@ -3,7 +3,102 @@
     {{ 'PAGES.HOME.TITLE' | translate }}
   </h1>
 
-  <a routerLink="/detail">{{ 'PAGES.HOME.GO_TO_DETAIL' | translate }}</a>
-  <a (click)="openDir()">Open Folder</a>
-  <app-existing-projects-list></app-existing-projects-list>
+  <div class="nb-theme-default">
+  <nb-card [nbSpinner]="this.electronService.loadingSpinnerStartingDevmode" nbSpinnerSize="giant" nbSpinnerStatus="danger">
+    <nb-card-header>Setup</nb-card-header>
+    <nb-card-body [style.opacity]="this.electronService.loadingSpinnerStartingDevmode ? 0.8 : 1">
+      
+      <div style="float: left">
+        <app-existing-projects-list (newSelectedProject)="setSelectedProject($event)"></app-existing-projects-list>
+        <a [class.disabled]="selectedProject === '' ? true : false " (click)="launchDevmode(this.selectedProject)">Load Project</a>
+      </div>
+
+
+      <div class="nb-theme-default" style="float: right">
+
+
+        <nb-card  status="danger">
+          <nb-card-header>Create new project</nb-card-header>
+          <nb-card-body class="outerCardBody">
+
+        <form style="transform: translateX(0px);" [formGroup]="newProjectSetupForm">
+          <!-- name -->
+          <div class="form-group row">
+            <label for="projectName" class="label col-sm-3 col-form-label floatLeft adjustLabelPosition">Name</label>
+            <div class="col-sm-9 leaveSpaceForHelp ">
+              <input formControlName="projectName" name="projectName" type="text" nbInput fullWidth id="projectName" placeholder="Project Name">
+            </div> 
+            
+                <!-- <nb-icon class="centerIcon" [icon]="'question-mark-circle-outline'" pack="eva" nbPopover="Enter a Name for your NFT. E.g. 'TurboApe' " nbPopoverTrigger="hover" nbPopoverPlacement="right"></nb-icon> -->
+                <nb-icon class="centerIcon" [icon]="'question-mark-circle-outline'" pack="eva" nbTooltip="This is a tooltip" nbTooltipStatus="primary"></nb-icon>
+            
+          </div>
+            <br>
+          <!-- mnemonic -->
+          <div class="form-group row">
+            <label for="mnemonic" class="label col-sm-3 col-form-label floatLeft adjustLabelPosition">Mnemonic</label>
+            <div class="col-sm-9 leaveSpaceForHelp ">
+              <input type="text" formControlName="mnemonic" name="mnemonic"  nbInput fullWidth id="mnemonic" placeholder="A 12 word bip39 mnemonic">
+            </div>
+            <nb-icon class="centerIcon" [icon]="'question-mark-circle-outline'" pack="eva" nbPopover="A mnemonic that accounts to the bip39 standard " nbPopoverTrigger="hover" nbPopoverPlacement="right"></nb-icon>
+          </div>
+          <br>
+          <!-- number of accounts -->
+          <div class="form-group row">
+            <label for="numberOfAccs" class="label col-sm-3 col-form-label floatLeft adjustLabelPosition">Accounts</label>
+            <div class="col-sm-9 leaveSpaceForHelp ">
+              <input type="text" formControlName="numberOfAccs" name="numberOfAccs"  nbInput fullWidth id="numberOfAccs" placeholder="Short Description">
+            </div>
+            <nb-icon class="centerIcon" [icon]="'question-mark-circle-outline'" pack="eva" nbPopover="This will be included into the transaction. Keep it short! " nbPopoverTrigger="hover" nbPopoverPlacement="right"></nb-icon>
+          </div>
+          
+<!--           <ng-number-picker
+          [(value)]="value"
+          [min]="50"
+          [max]="150"
+          [step]="10"
+          [pickStartAfter]="500"
+          [pickTimer]="100"
+          [prefix]="'cost'"
+          [postfix]="'Accounts'"
+          [buttonsOrientation]="'h'"
+          [size]="'md'"
+          [showDownButton]="true"
+          [showUpButton]="true"
+          [inputReadOnly]="false"
+          [mouseWheel]="true"
+          [arrowKeys]="true"
+          [placeholder]="'How much'"
+          [customClass]="{'container': '', 'up': '', 'down': '', 'prefix': '', 'postfix': ''}"
+       
+        ></ng-number-picker> -->
+
+
+ <!-- 
+          <div class="form-group row">
+            <div class="offset-sm-3 col-sm-9">
+              <button type="submit" [disabled]="!newProjectSetupForm.valid"  nbButton status="primary">Mint</button>
+            </div>
+          </div> -->
+
+        </form>
+
+
+      </nb-card-body>
+      <!-- <nb-card-footer>By Wikipedia</nb-card-footer> -->
+    </nb-card>
+    <a [class.disabled]="!newProjectSetupForm.valid" (click)="launchDevmode(this.newProjectSetupForm.get('projectName').value)">Spawn new Chain</a>
+      </div>
+      <a class="or"> OR </a>
+      <!-- placeholder to put an "OR " <a [class.disabled]="selectedProject === '' ? true : false " (click)="launchDevmode()">Load Project</a> -->
+    </nb-card-body>
+    <!-- <nb-card-footer>PLaceholder</nb-card-footer> -->
+  </nb-card>
+
+  
+
+</div>
+
+<a routerLink="/detail">{{ 'PAGES.HOME.GO_TO_DETAIL' | translate }}</a>
+
 </div>

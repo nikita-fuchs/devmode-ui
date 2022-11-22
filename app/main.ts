@@ -1,4 +1,4 @@
-import {app, BrowserWindow, screen} from 'electron';
+import {app, BrowserWindow, contextBridge, ipcMain, screen} from 'electron';
 import * as path from 'path';
 import * as fs from 'fs';
 
@@ -7,6 +7,34 @@ const args = process.argv.slice(1),
   serve = args.some(val => val === '--serve');
 
 function createWindow(): BrowserWindow {
+/* 
+  contextBridge.exposeInMainWorld(
+    "api", {
+        send: (channel, data) => {
+            // whitelist channels
+            let validChannels = ["toMain"];
+            if (validChannels.includes(channel)) {
+                ipcRenderer.send(channel, data);
+            }
+        },
+        receive: (channel, func) => {
+            let validChannels = ["fromMain"];
+            if (validChannels.includes(channel)) {
+                // Deliberately strip event as it includes `sender` 
+                ipcRenderer.on(channel, (event, ...args) => func(...args));
+            }
+        }
+    }
+); */
+
+ipcMain.on('get-existing-projects', event => {
+  // It's so good because below have a delay 5s to execute, and this don't lock rendereder :)
+
+    //console.log(app.getPath('documents'))
+    // Send reply to a renderer
+    event.sender.send('ping-good-reply', app.getPath('home'))
+
+})
 
   const size = screen.getPrimaryDisplay().workAreaSize;
 

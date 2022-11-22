@@ -12,10 +12,6 @@ if (APP_CONFIG.production) {
   enableProdMode();
 }
 
-function puts(error, stdout, stderr) { sys.puts(stdout)}
-exec("ls -la", function(err, stdout, stderr) {
-  console.log("yo?", stdout);
-});
 
 platformBrowserDynamic()
   .bootstrapModule(AppModule, {

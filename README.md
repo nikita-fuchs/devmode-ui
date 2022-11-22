@@ -1,3 +1,9 @@
+dev notes: 
+
+- altered npm packages:
+ ~/Documents/DAPPS/Aeternity/devmode-ui/node_modules/ng2-smart-table : Replaced color #1e6bb8 (blue) to violet (#ff3d71)
+
+
 [![Angular Logo](https://www.vectorlogo.zone/logos/angular/angular-icon.svg)](https://angular.io/) [![Electron Logo](https://www.vectorlogo.zone/logos/electronjs/electronjs-icon.svg)](https://electronjs.org/)
 
 ![Maintained][maintained-badge]
