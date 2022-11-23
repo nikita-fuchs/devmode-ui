@@ -1,0 +1,13 @@
+<div class="nb-theme-default">
+
+  <nb-card status="danger">
+    <nb-card-header>Choose existing project</nb-card-header>
+    <nb-card-body 
+        [style.background-color]="project === this.selectedProject ? '#ffcfdc' : 'unset' " *ngFor="let project of projectList"
+        (click)="emitNewSelectedProject(project)">
+        {{project}}
+    </nb-card-body>
+    <!-- <nb-card-footer>By Wikipedia</nb-card-footer> -->
+  </nb-card>
+
+</div>
