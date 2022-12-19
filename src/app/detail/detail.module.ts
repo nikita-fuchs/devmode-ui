@@ -9,10 +9,19 @@ import { AccountBalanceListComponent } from '../components/account-balance-list/
 import { Ng2SmartTableModule } from 'ng2-smart-table';
 import { BalanceComponent } from '../components/AccountBalanceList/balance/balance.component';
 import { PrivateKeyComponent } from '../components/AccountBalanceList/private-key/private-key.component';
-import { NbIconModule } from '@nebular/theme';
+import { NbIconModule, NbPopoverModule } from '@nebular/theme';
+import { NgIconsModule } from '@ng-icons/core';
+import { jamKey } from '@ng-icons/jam-icons';
 
 @NgModule({
-  imports: [CommonModule, SharedModule, DetailRoutingModule, Ng2SmartTableModule, NbIconModule],
+  imports: [CommonModule,
+    SharedModule,
+    DetailRoutingModule,
+    Ng2SmartTableModule,
+    NbIconModule,
+    NbPopoverModule,
+    NgIconsModule.withIcons({ jamKey })
+  ],
   declarations: [DetailComponent, AccountBalanceListComponent, BalanceComponent, PrivateKeyComponent],
   entryComponents: [BalanceComponent, PrivateKeyComponent]
 })

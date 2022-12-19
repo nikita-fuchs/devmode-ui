@@ -15,17 +15,22 @@ export class ApiStateService {
    accountDataSource: LocalDataSource
  }; // the latest fetched API data,
 
- 
+ statusPingIntervalRef;
+
   constructor() {
     this.state.accountDataSource = new LocalDataSource([]);
 
     this.pingStatusApi();
 
-    setInterval(async () => {
+    this.statusPingIntervalRef = setInterval(async () => {
       await this.pingStatusApi();
     }, 1000);
 
    }
+
+  stopPingingNodeForStatus(){
+      clearInterval(this.statusPingIntervalRef);
+    }
 
    async pingStatusApi(){
     const myHeaders = new Headers();

@@ -21,9 +21,14 @@ import { NbAccordionModule,
 import { ReactiveFormsModule } from '@angular/forms';
 import { NumberPickerModule } from 'ng-number-picker';
 
+//temporary, for tryout
+import { NgIconsModule } from '@ng-icons/core';
+import { jamKey } from '@ng-icons/jam-icons';
+
 @NgModule({
   declarations: [HomeComponent, ExistingProjectsListComponent],
   imports: [CommonModule,
+    NgIconsModule.withIcons({ jamKey }), // temporary, for tryout
     NbTooltipModule,
      SharedModule,
       HomeRoutingModule,

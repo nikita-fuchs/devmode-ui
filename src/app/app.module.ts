@@ -22,8 +22,6 @@ import { NbEvaIconsModule } from '@nebular/eva-icons';
 import { AddressComponent } from './components/AccountBalanceList/address/address.component';
 
 import { NbSidebarModule, NbLayoutModule, NbButtonModule } from '@nebular/theme';
-
-
 // AoT requires an exported function for factories
 const httpLoaderFactory = (http: HttpClient): TranslateHttpLoader =>  new TranslateHttpLoader(http, './assets/i18n/', '.json');
 

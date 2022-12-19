@@ -36,9 +36,12 @@
             "styles": [
               "src/styles.scss",
               "node_modules/@nebular/theme/styles/prebuilt/default.css",
-
-
             ],
+            "stylePreprocessorOptions": {
+              "includePaths": [
+                "./node_modules"
+              ]
+            },
             "scripts": [],
             "customWebpackConfig": {
               "path": "./angular.webpack.js",
@@ -151,6 +154,11 @@
               "src/styles.scss",
               "node_modules/@nebular/theme/styles/prebuilt/default.css",
             ],
+            "stylePreprocessorOptions": {
+              "includePaths": [
+                "./node_modules"
+              ]
+            },
             "assets": [
               "src/favicon.ico",
               "src/assets"

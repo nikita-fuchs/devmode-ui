@@ -1,3 +1,8 @@
-<nb-icon class="centerIcon" [icon]="'question-mark-circle-outline'" pack="eva" nbPopover="Enter a Name for your NFT. E.g. 'TurboApe' " nbPopoverTrigger="hover" nbPopoverPlacement="right"></nb-icon>
+<!-- <nb-icon class="centerIcon" [icon]="'question-mark-circle-outline'" pack="eva" nbPopover="Enter a Name for your NFT. E.g. 'TurboApe' " nbPopoverTrigger="hover" nbPopoverPlacement="right"></nb-icon> -->
 
-{{privateKey}}
+<!-- <button nbButton outline status="danger"><ng-icon size="30" strokeWidth="1" name="jamKey"></ng-icon></button> -->
+<button *ngIf="privateKey !== undefined" nbPopover="Copied to clipboard !" 
+        nbPopoverTrigger="noop" 
+        nbButton status="danger" 
+        (click)="copyPrivateKey()" 
+        style="padding: 1.6875rem 1.125rem !important"><ng-icon size="30" strokeWidth="3" name="jamKey"></ng-icon></button>

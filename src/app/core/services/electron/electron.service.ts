@@ -91,13 +91,15 @@ export class ElectronService {
   launchDevmode(workSpace: string, numberOfAccs: number, mnemonic?: string){
     console.log('Trying to spawn childprocess and devmode ...');
 
-    const spawnOptions: SpawnOptions =  {
+    let spawnOptions: SpawnOptions =  {
       env: {
       AE__SYSTEM__DEV_MODE: 'true',
-      AE__HTTP__ENDPOINTS__DRYRUN: 'true',
+      // AE__HTTP__ENDPOINTS__DRYRUN: 'true',
       AE__SYSTEM__PLUGINS: '[{"name":"aeplugin_dev_mode"}]',
       AE__CHAIN__DB_PATH: `/Users/ethereumbook/Documents/DAPPS/Aeternity/fresh_repos/aeternity/_build/prod/rel/aeternity/workspaces/${workSpace}/`}
     };
+
+    spawnOptions['AE__HTTP__ENDPOINTS__DRYRUN'] = 'true'
 
     //@ts-ignore
     const devmodeProcessShell = this.childProcess.exec('~/Documents/DAPPS/Aeternity/fresh_repos/aeternity/_build/prod/rel/aeternity/bin/aeternity console', spawnOptions)

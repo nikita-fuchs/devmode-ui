@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, OnDestroy } from '@angular/core';
 import { ApiStateService } from '../services/api-state.service';
 
 @Component({
@@ -6,7 +6,7 @@ import { ApiStateService } from '../services/api-state.service';
   templateUrl: './detail.component.html',
   styleUrls: ['./detail.component.scss']
 })
-export class DetailComponent implements OnInit {
+export class DetailComponent implements OnInit, OnDestroy {
 
   constructor(public apiState: ApiStateService) { }
 
@@ -33,6 +33,11 @@ export class DetailComponent implements OnInit {
       // (meaning all columns should contain search query or at least one)
       // 'AND' by default, so changing to 'OR' by setting false here
     }
+  }
+
+  ngOnDestroy(){
+    console.log('Stopping fetching /status API');
+    this.apiState.stopPingingNodeForStatus();
   }
 
 }
